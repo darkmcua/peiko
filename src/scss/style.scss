@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+html, body, div, span, p, strong{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+strong{
+  font-weight: 600;
+}
+.wrap{
+  width: 100%;
+  max-width: 550px;
+  margin: 25px auto;
+  border: 1px solid #f1f1f1;
+  padding: 50px;
+}
+
+button{
+  border: 1px solid #f1f1f1;
+  padding: 8px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333333;
+  transition: background-color .2s, color .2s;
+  &:hover{
+    cursor: pointer;
+    background-color: #404040;
+    color: #c1c1c1;
+  }
+}
+
+.divTable{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #f4f4f4;
+  &Heading{
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #f4f4f4;
+  }
+  &Row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    + .divTableRow{
+      border-top: 1px solid #f4f4f4;
+    }
+  }
+  &Cell,
+  &Head{
+    max-width: calc(100% /3);
+    flex: 0 0 calc(100% /3);
+    text-align: center;
+    padding: 15px 10px;
+  }
+}
